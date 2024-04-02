@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="ako to.jpg" alt="Logo">
+                </div>
+                <div class="header-text">
+                    <h1><span>HI, I'm Julius Castillo</span></h1>
+                </div>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#table-of-contents">Table Of Contents</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div id="about">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="ako to.jpg" class="Mwa">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi I'm Julius Castillo, 19, From Pola, And I am student at Mindoro State University taking
+                    Bachelor Science in Information Technology.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="table-of-contents">
+        <div class="container">
+            <h2>Table of Contents</h2>
+            <div class="project-box">
+                <a href="#project1" class="project-item">Project 1</a>
+                <a href="#project2" class="project-item">Project 2</a>
+                <a href="#project3" class="project-item">Project 3</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="portfolio">
+        <div class="container" id="project1">
+            <h2>Project 1</h2>
+            <div class="work">
+                <div class="work-info">
+                    <img src="project 3.png" alt="Project 1">
+                    <div class="layer">
+                        <h3>MINSU CLINIC MANAGEMENT SYSTEM</h3>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>This project showcases what we did on our last semester of the first year of college. We developed a system for students who need medical attention or consultation even when they are at home, so they can easily know what medicine needs to be taken.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="project2">
+            <h2>Project 2</h2>
+            <div class="work">
+                <div class="work-info">
+                    <img src="Screenshot 2024-04-02 171654.png" alt="Project 2">
+                    <div class="layer">
+                        <h3>LOGIN FORM OY MY JULIEVER WEBSITE</h3>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>This project showcases the project i create and been creating this now its not complte but i am completing it, this system can help travelers like tourist im not usre what is yung pinaka topic but i know that these system i am creating is can help tourist visiting phillipines.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="project3">
+            <h2>Project 3</h2>
+            <div class="work">
+                <div class="work-info">
+                    <img src="project11.png" alt="Project 3">
+                    <div class="layer">
+                        <h3>EDUCATIONAL SYSTEM</h3>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>This project showcases the system i create its not a major system but i can say thisis included as my
+                        project because in this project we have 5 different function, 1st was to count how many vowelsamd conconant in a word you put, second 
+                        was sum of the first 10 number you inserted and etc, this project can help many elementary or even high school and college students when they encounter some of these problems
+                    </p>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var projectItems = document.querySelectorAll('.project-item');
+
+            projectItems.forEach(function (item) {
+                item.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    var targetId = item.getAttribute('href');
+                    var targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
